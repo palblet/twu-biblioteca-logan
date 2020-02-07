@@ -10,13 +10,12 @@ public class BibliotecaApp {
     private static int numOfBooks = 3;
 
     public static void main(String[] args) {
-        boolean done = false;
-
         System.out.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
         space();
 
         populateBookList();
 
+        boolean done = false;
         while(!done){
 
             displayMenu();
@@ -28,9 +27,14 @@ public class BibliotecaApp {
                 case 2: checkOutBook();break;
                 case 3: checkInBook();break;
             }
-
             space();
         }
+    }
+
+    public static void populateBookList(){
+        list.add(new Book("First Book", "Billy Bob", 1990));
+        list.add(new Book("Second Book", "Bob Billy", 1998));
+        list.add(new Book("Third Book", "Joe Bob", 2001));
     }
 
     public static void displayMenu(){
@@ -41,6 +45,7 @@ public class BibliotecaApp {
                 "4: Exit");
     }
 
+    //Get input for a numbered list of choices
     public static int getInput(int num) {
         Scanner scan = new Scanner(System.in);
         String input;
@@ -51,6 +56,7 @@ public class BibliotecaApp {
         return Integer.parseInt(input);
     }
 
+    //Get input for an open ended question
     public static String getInput(){
         Scanner scan = new Scanner(System.in);
         String input;
@@ -61,6 +67,7 @@ public class BibliotecaApp {
         return input;
     }
 
+    //Checking the range for a number choice
     public static boolean checkInputRange(String input, int range){
         boolean valid = checkIntInput(input);
         if(valid){
@@ -72,6 +79,7 @@ public class BibliotecaApp {
         return valid;
     }
 
+    //Checking if the input for a number is a number
     public static boolean checkIntInput(String input){
         boolean valid = true;
         try {
@@ -82,6 +90,7 @@ public class BibliotecaApp {
         return valid;
     }
 
+    //Checking if the input isn't empty
     public static boolean checkInput(String input){
         boolean valid = true;
             if(input.isEmpty()){
@@ -90,12 +99,7 @@ public class BibliotecaApp {
         return valid;
     }
 
-    public static void populateBookList(){
-        list.add(new Book("First Book", "Billy Bob", 1990));
-        list.add(new Book("Second Book", "Bob Billy", 1998));
-        list.add(new Book("Third Book", "Joe Bob", 2001));
-    }
-
+    //Displays books in the list
     public static void displayBookList(){
         int num = numOfBooks;
         for (Book i:list) {
@@ -106,6 +110,7 @@ public class BibliotecaApp {
         space();
     }
 
+    //Checks out a book
     public static void checkOutBook(){
         System.out.println("There are " + numOfBooks + " available.\n");
         int i = getInput(numOfBooks);
@@ -119,6 +124,7 @@ public class BibliotecaApp {
         }
     }
 
+    //Checks in a book
     private static void checkInBook() {
         System.out.println("Please give a Book title");
         String book;
@@ -128,6 +134,7 @@ public class BibliotecaApp {
         validateCheckIn(bookLocation);
     }
 
+    //Finds the book location by title
     private static int findBook(String book){
         int found = -1;
         for (Book i: list) {
@@ -138,6 +145,7 @@ public class BibliotecaApp {
         return found;
     }
 
+    //If the checked out book location is real, check it in
     public static void validateCheckIn(int bookLocation){
         if(bookLocation == -1){
             System.out.println("That is not a valid book to return.");
@@ -147,18 +155,21 @@ public class BibliotecaApp {
         }
     }
 
+    //Supplement method for removing a checked out book from the list
     public static void fixList(int i){
         Book temp = list.get(i);
         list.remove(i);
         list.add(temp);
     }
 
+    //Supplement method for validating input
     public static boolean notValid(boolean valid){
         System.out.println("input is not valid");
         valid = !valid;
         return valid;
     }
 
+    //Quality of Life
     public static void space(){
         System.out.println();
     }
