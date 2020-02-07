@@ -41,9 +41,29 @@ public class BibliotecaApp {
     }
 
     public static boolean logIn(){
-        boolean loggedIn = false;
-        t("Username: ");
-        return loggedIn;
+        t("libraryNumber: ");
+        String libraryNumber = getInput();
+        Customer attempt = validatelibraryNumber(libraryNumber);
+        return attemptPassword(attempt);
+    }
+
+    private static Customer validatelibraryNumber(String libraryNumber) {
+        for (Customer c: customers) {
+            if(c.getlibraryNumber().equals(libraryNumber)){
+                user = c;
+                return c;
+            }
+        }
+        return null;
+    }
+
+    private static boolean attemptPassword(Customer attempt){
+        if(attempt != null){
+            t("Password: ");
+            String password = getInput();
+            return attempt.getPassword().equals(password);
+        }
+        return false;
     }
 
     public static void displayMenu(){
@@ -53,7 +73,8 @@ public class BibliotecaApp {
                 "3: Check out a Book\n"+
                 "4: Check in a Book\n"+
                 "5: Check out a Movie\n"+
-                "6: Exit\n");
+                "6: Display User Info\n"+
+                "7: Exit\n");
     }
 
     public static void displayUserInfo(){
@@ -73,9 +94,9 @@ public class BibliotecaApp {
     }
 
     private static void populateCustomers() {
-        customers.add(new Customer("123-456","password", "Sam Pepper", "sp@yahoo.com", "1234567890"));
-        customers.add(new Customer("890-098","password", "Lonely Heart", "lh@yahoo.com", "2140009999"));
-        customers.add(new Customer("654-321","password", "Cub Band", "cb@yahoo.com", "8005551234"));
+        customers.add(new Customer("123-4560","password", "Sam Pepper", "sp@yahoo.com", "1234567890"));
+        customers.add(new Customer("890-0980","password", "Lonely Heart", "lh@yahoo.com", "2140009999"));
+        customers.add(new Customer("654-3210","password", "Cub Band", "cb@yahoo.com", "8005551234"));
     }
 
     //Displays books in the list
@@ -93,7 +114,7 @@ public class BibliotecaApp {
         int num = numOfMovies;
         for (Movie i:movieList) {
             if(!i.isCheckedOut()) {
-                t(numOfMovies - --num + " : " + i.toString() + "\n");
+                t(numOfMovies - --num + ": " + i.toString() + "\n");
             }
         }
     }
@@ -103,7 +124,6 @@ public class BibliotecaApp {
         Scanner scan = new Scanner(System.in);
         String input;
         do{
-            t("Please enter selection: ");
             input = scan.nextLine();
         }while(!checkInputRange(input, num));
         return Integer.parseInt(input);
@@ -114,7 +134,6 @@ public class BibliotecaApp {
         Scanner scan = new Scanner(System.in);
         String input;
         do{
-            t("Please enter selection: ");
             input = scan.nextLine();
         }while(!checkInput(input));
         return input;
@@ -172,7 +191,7 @@ public class BibliotecaApp {
 
     //Checks out a movie
     public static void checkOutMovie(){
-        t("There are " + numOfMovies + "available.\n");
+        t("There are " + numOfMovies + " available.\n");
         int i = getInput(numOfMovies);
         validateCheckOutMovie(i);
     }
@@ -315,6 +334,14 @@ class Customer{
         name = n;
         email = e;
         phoneNumber = pn;
+    }
+
+    public String getlibraryNumber(){
+        return libraryNumber;
+    }
+
+    public String getPassword(){
+        return password;
     }
 
     @Override
