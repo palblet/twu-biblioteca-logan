@@ -24,6 +24,10 @@ class User {
         return password;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void checkOutBook(Book book){
         checkedOut.add(book);
     }
@@ -51,4 +55,5 @@ class User {
     public String toString(){
         return name + " || " + email + " || " + phoneNumber;
     }
+
 }

@@ -44,8 +44,11 @@ public class BibliotecaApp {
         }
     }
 
-    private static void displayCheckedOut() {
-        t(user.checkedOutBooksString());
+    public static void displayCheckedOut() {
+        for (User user:users) {
+            t(user.getName() + " Has checked out:\n" +
+                    user.checkedOutBooksString());
+        }
     }
 
     //Starts log in
@@ -92,29 +95,36 @@ public class BibliotecaApp {
     }
 
     public static void displayUserInfo(){
-        for (User user:users) {
-            t(user.toString());
-        }
+        t(user.toString());
     }
 
     public static void populateBookList(){
         bookList.add(new Book("First Book", "Billy Bob", 1990));
         bookList.add(new Book("Second Book", "Bob Billy", 1998));
         bookList.add(new Book("Third Book", "Joe Bob", 2001));
+        bookList.get(1).checkOut();
     }
 
     private static void populateMovieList() {
-        movieList.add(new Movie("First Movie", 1987, "Some Guy", 6));
-        movieList.add(new Movie("Second Movie", 1999, "His Brother", 8));
-        movieList.add(new Movie("Third Movie", 2007, "Geff", 3));
+        movieList.add(new Movie("First Movie", 1987,
+                "Some Guy", 6));
+        movieList.add(new Movie("Second Movie", 1999,
+                "His Brother", 8));
+        movieList.add(new Movie("Third Movie", 2007,
+                "Geff", 3));
     }
 
     private static void populateUsers() {
-        users.add(new User("123-4560","password", "Sam Pepper", "sp@yahoo.com", "1234567890"));
-        users.add(new User("890-0980","password", "Lonely Heart", "lh@yahoo.com", "2140009999"));
-        users.add(new User("654-3210","password", "Cub Band", "cb@yahoo.com", "8005551234"));
-        users.add(new User("123-1231","password","Lib Rarian", "lr@library.net", "1112223333"));
+        users.add(new User("123-4560","password",
+                "Sam Pepper", "sp@yahoo.com", "1234567890"));
+        users.add(new User("890-0980","password",
+                "Lonely Heart", "lh@yahoo.com", "2140009999"));
+        users.add(new User("654-3210","password",
+                "Club Band", "cb@yahoo.com", "8005551234"));
+        users.add(new User("123-1231","password",
+                "Lib Rarian", "lr@library.net", "1112223333"));
         users.get(3).makeLibrarian();
+        users.get(0).checkOutBook(bookList.get(1));
     }
 
     //Displays books in the list
