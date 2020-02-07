@@ -7,12 +7,12 @@ class Customer{
     private String name, email, phoneNumber;
     private ArrayList<Book> checkedOut = new ArrayList<Book>();
 
-    public Customer(String l, String p, String n, String e, String pn){
-        libraryNumber = l;
-        password = p;
-        name = n;
-        email = e;
-        phoneNumber = pn;
+    public Customer(String libraryNumber, String password, String name, String email, String phoneNumber){
+        this.libraryNumber = libraryNumber;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getlibraryNumber(){
@@ -23,8 +23,16 @@ class Customer{
         return password;
     }
 
+    public void checkOutBook(Book book){
+        checkedOut.add(book);
+    }
+
     @Override
     public String toString(){
         return name + " || " + email + " || " + phoneNumber;
+    }
+
+    public ArrayList<Book> getCheckOutBooks() {
+        return checkedOut;
     }
 }
