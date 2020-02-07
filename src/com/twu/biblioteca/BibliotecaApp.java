@@ -7,16 +7,16 @@ public class BibliotecaApp {
 
     private static ArrayList<Book> bookList = new ArrayList<Book>();
     private static ArrayList<Movie> movieList = new ArrayList<Movie>();
-    private static ArrayList<Customer> customers = new ArrayList<Customer>();
-    private static int numMenuItems = 7, numOfBooks = 3, numOfMovies = 3;
-    private static Customer user;
+    private static ArrayList<User> users = new ArrayList<User>();
+    private static int numMenuItems = 8, numOfBooks = 3, numOfMovies = 3;
+    private static User user;
 
     public static void main(String[] args) {
         t("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n");
 
         populateBookList();
         populateMovieList();
-        populateCustomers();
+        populateUsers();
 
         boolean loggedIn = false, done = false;
 
@@ -36,21 +36,29 @@ public class BibliotecaApp {
                 case 4: checkInBook();break;
                 case 5: checkOutMovie();break;
                 case 6: displayUserInfo();break;
+                case 8:
+                    if(user.isLibrarian())
+                        displayCheckedOut();
+                    break;
             }
         }
+    }
+
+    private static void displayCheckedOut() {
+        t(user.checkedOutBooksString());
     }
 
     //Starts log in
     public static boolean logIn(){
         t("libraryNumber: ");
         String libraryNumber = getInput();
-        Customer attempt = validatelibraryNumber(libraryNumber);
+        User attempt = validateLibraryNumber(libraryNumber);
         return attemptPassword(attempt);
     }
 
     //checks if log in user is correct
-    private static Customer validatelibraryNumber(String libraryNumber) {
-        for (Customer c: customers) {
+    private static User validateLibraryNumber(String libraryNumber) {
+        for (User c: users) {
             if(c.getlibraryNumber().equals(libraryNumber)){
                 user = c;
                 return c;
@@ -60,7 +68,7 @@ public class BibliotecaApp {
     }
 
     //attempt password for the user
-    private static boolean attemptPassword(Customer attempt){
+    private static boolean attemptPassword(User attempt){
         if(attempt != null){
             t("Password: ");
             String password = getInput();
@@ -77,11 +85,16 @@ public class BibliotecaApp {
                 "4: Check in a Book\n"+
                 "5: Check out a Movie\n"+
                 "6: Display User Info\n"+
-                "7: Exit\n");
+                "7: Exit");
+        if(user.isLibrarian()){
+            t("8: Who has books checked out");
+        }
     }
 
     public static void displayUserInfo(){
-        t(user.toString());
+        for (User user:users) {
+            t(user.toString());
+        }
     }
 
     public static void populateBookList(){
@@ -96,10 +109,12 @@ public class BibliotecaApp {
         movieList.add(new Movie("Third Movie", 2007, "Geff", 3));
     }
 
-    private static void populateCustomers() {
-        customers.add(new Customer("123-4560","password", "Sam Pepper", "sp@yahoo.com", "1234567890"));
-        customers.add(new Customer("890-0980","password", "Lonely Heart", "lh@yahoo.com", "2140009999"));
-        customers.add(new Customer("654-3210","password", "Cub Band", "cb@yahoo.com", "8005551234"));
+    private static void populateUsers() {
+        users.add(new User("123-4560","password", "Sam Pepper", "sp@yahoo.com", "1234567890"));
+        users.add(new User("890-0980","password", "Lonely Heart", "lh@yahoo.com", "2140009999"));
+        users.add(new User("654-3210","password", "Cub Band", "cb@yahoo.com", "8005551234"));
+        users.add(new User("123-1231","password","Lib Rarian", "lr@library.net", "1112223333"));
+        users.get(3).makeLibrarian();
     }
 
     //Displays books in the list

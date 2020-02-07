@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab29a354-a860-4095-8439-7f45183810c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/CustomerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Librarian.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="111" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,7 +67,7 @@
       <recent name="com.twu.biblioteca" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerTest.hasCheckedOutBooks">
+  <component name="RunManager" selected="Application.BibliotecaApp">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
       <module name="biblioteca" />
@@ -75,7 +81,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerTest.hasCheckedOutBooks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -84,8 +90,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.CustomerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.hasCheckedOutBooks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.UserTest" />
       <option name="METHOD_NAME" value="hasCheckedOutBooks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.userIsLibrarian" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.UserTest" />
+      <option name="METHOD_NAME" value="userIsLibrarian" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -93,8 +130,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerTest.hasCheckedOutBooks" />
         <item itemvalue="Application.BibliotecaApp" />
+        <item itemvalue="JUnit.UserTest.userIsLibrarian" />
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.UserTest.hasCheckedOutBooks" />
       </list>
     </recent_temporary>
   </component>
@@ -110,7 +149,7 @@
       <updated>1581012448918</updated>
       <workItem from="1581012450348" duration="4877000" />
       <workItem from="1581044736494" duration="9077000" />
-      <workItem from="1581087726168" duration="15939000" />
+      <workItem from="1581087726168" duration="17799000" />
     </task>
     <task id="LOCAL-00001" summary="Test Commit">
       <created>1581024461711</created>
@@ -266,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581103792503</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added Customer having books checked out">
+      <created>1581104771847</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1581104771847</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +339,8 @@
     <MESSAGE value="added display user info" />
     <MESSAGE value="Added log in" />
     <MESSAGE value="Separated Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Separated Classes" />
+    <MESSAGE value="added Customer having books checked out" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Customer having books checked out" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581024499973">
@@ -312,30 +359,50 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="210" y="426" width="512" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1792.1120@0.0.1792.1120" timestamp="1581103579468" />
+    <state x="45" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581104858446">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="45" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1581104858446" />
     <state x="639" y="414" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1581093239064">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="639" y="414" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1581093239064" />
-    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581103792313">
+    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581104771628">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581103792313" />
-    <state width="852" height="318" key="GridCell.Tab.0.bottom" timestamp="1581104742519">
+    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581104771628" />
+    <state width="852" height="318" key="GridCell.Tab.0.bottom" timestamp="1581106511235">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581104742519" />
-    <state width="852" height="318" key="GridCell.Tab.0.center" timestamp="1581104742518">
+    <state width="852" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581106511235" />
+    <state width="852" height="318" key="GridCell.Tab.0.center" timestamp="1581106511234">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581104742518" />
-    <state width="852" height="318" key="GridCell.Tab.0.left" timestamp="1581104742517">
+    <state width="852" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581106511234" />
+    <state width="852" height="318" key="GridCell.Tab.0.left" timestamp="1581106511234">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581104742517" />
-    <state width="852" height="318" key="GridCell.Tab.0.right" timestamp="1581104742518">
+    <state width="852" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581106511234" />
+    <state width="852" height="318" key="GridCell.Tab.0.right" timestamp="1581106511235">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581104742518" />
+    <state width="852" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581106511235" />
+    <state width="852" height="391" key="GridCell.Tab.1.bottom" timestamp="1581105578933">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="852" height="391" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581105578933" />
+    <state width="852" height="391" key="GridCell.Tab.1.center" timestamp="1581105578932">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="852" height="391" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581105578932" />
+    <state width="852" height="391" key="GridCell.Tab.1.left" timestamp="1581105578931">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="852" height="391" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581105578931" />
+    <state width="852" height="391" key="GridCell.Tab.1.right" timestamp="1581105578932">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="852" height="391" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581105578932" />
     <state x="384" y="141" key="SettingsEditor" timestamp="1581093821426">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -352,9 +419,18 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="676" y="484" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1581028360298" />
+    <state x="21" y="147" width="852" height="825" key="find.popup" timestamp="1581105321057">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="21" y="147" width="852" height="825" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1581105321057" />
     <state x="112" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1581098091733">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="112" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1581098091733" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/biblioteca$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1581105279858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.twu.biblioteca.*</FILTER>
+    </SUITE>
   </component>
 </project>
