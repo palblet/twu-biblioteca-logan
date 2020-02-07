@@ -16,7 +16,13 @@ public class BibliotecaApp {
         populateBookList();
         populateMovieList();
 
-        boolean done = false;
+
+        boolean loggedIn = false, done = false;
+
+        while(!loggedIn){
+
+        }
+
         while(!done){
 
             displayMenu();
@@ -41,7 +47,7 @@ public class BibliotecaApp {
                 "3: Check out a Book\n"+
                 "4: Check in a Book\n"+
                 "5: Check out a Movie\n"+
-                "7: Exit");
+                "6: Exit");
     }
 
     public static void populateBookList(){
@@ -283,4 +289,23 @@ class Movie extends libraryObject{
         return name + " || " + year + " || " + director + " || " + rating;
     }
 
+}
+
+class Customer{
+    private String libraryNumber, password;
+    private String name, email;
+    private int phoneNumber;
+
+    public Customer(String l, String p, String n, String e, int pn){
+        libraryNumber = l;
+        password = p;
+        name = n;
+        email = e;
+        phoneNumber = pn;
+    }
+
+    @Override
+    public String toString(){
+        return name + " || " + email + " || " + phoneNumber;
+    }
 }
