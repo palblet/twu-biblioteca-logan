@@ -283,8 +283,7 @@ public class BibliotecaApp {
     //Supplement method for validating input
     public static boolean notValid(boolean valid){
         t("input is not valid");
-        valid = !valid;
-        return valid;
+        return !valid;
     }
 
     //Quality of Life
