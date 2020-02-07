@@ -6,14 +6,15 @@ import java.util.Scanner;
 public class BibliotecaApp {
 
     private static ArrayList<Book> bookList = new ArrayList<Book>();
-    private static int numMenuItems = 4;
-    private static int numOfBooks = 3;
+    private static ArrayList<Movie> movieList = new ArrayList<Movie>();
+    private static int numMenuItems = 5, numOfBooks = 3, numOfMovies = 3;
 
     public static void main(String[] args) {
         System.out.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
         space();
 
         populateBookList();
+        populateMovieList();
 
         boolean done = false;
         while(!done){
@@ -22,10 +23,11 @@ public class BibliotecaApp {
             space();
 
             switch(getInput(numMenuItems)){
-                case 4: done = true;break;
+                case 5: done = true;break;
                 case 1: displayBookList();break;
-                case 2: checkOutBook();break;
-                case 3: checkInBook();break;
+                case 2: displayMovieList();break;
+                case 3: checkOutBook();break;
+                case 4: checkInBook();break;
             }
             space();
         }
@@ -37,12 +39,41 @@ public class BibliotecaApp {
         bookList.add(new Book("Third Book", "Joe Bob", 2001));
     }
 
+    private static void populateMovieList() {
+        movieList.add(new Movie("First Movie", 1987, "Some Guy", 6));
+        movieList.add(new Movie("Second Movie", 1999, "His Brother", 8));
+        movieList.add(new Movie("Third Movie", 2007, "Geff", 3));
+    }
+
     public static void displayMenu(){
         System.out.println("Menu:\n"+
                 "1: List of Books\n"+
-                "2: Check out a Book\n"+
-                "3: Check in a Book\n"+
-                "4: Exit");
+                "2: List of Movies\n"+
+                "3: Check out a Book\n"+
+                "4: Check in a Book\n"+
+                "5: Exit");
+    }
+
+    //Displays books in the list
+    public static void displayBookList(){
+        int num = numOfBooks;
+        for (Book i:bookList) {
+            if(!i.isCheckedOut()) {
+                System.out.println(numOfBooks - --num + ": " + i.toString());
+            }
+        }
+        space();
+    }
+
+    //Displays movies in the list
+    public static void displayMovieList(){
+        int num = numOfMovies;
+        for (Movie i:movieList) {
+            if(!i.isCheckedOut()) {
+                System.out.println(numOfMovies - --num + ": " + i.toString());
+            }
+        }
+        space();
     }
 
     //Get input for a numbered list of choices
@@ -99,17 +130,6 @@ public class BibliotecaApp {
         return valid;
     }
 
-    //Displays books in the list
-    public static void displayBookList(){
-        int num = numOfBooks;
-        for (Book i:bookList) {
-            if(!i.isCheckedOut()) {
-                System.out.println(numOfBooks - --num + ": " + i.toString());
-            }
-        }
-        space();
-    }
-
     //Checks out a book
     public static void checkOutBook(){
         System.out.println("There are " + numOfBooks + " available.\n");
@@ -119,7 +139,7 @@ public class BibliotecaApp {
             System.out.println("Sorry, that book is not available");
         }else{
             System.out.println("Thank you! Enjoy the book");
-            bookList.get(i-1).checkOutBook();
+            bookList.get(i-1).checkOut();
             removeCheckedOutBook(i-1);
         }
     }
@@ -151,7 +171,7 @@ public class BibliotecaApp {
             System.out.println("That is not a valid book to return.");
         }else{
             System.out.println("Thank you for returning the book");
-            bookList.get(bookLocation).checkInBook();
+            bookList.get(bookLocation).checkIn();
         }
     }
 
@@ -175,12 +195,29 @@ public class BibliotecaApp {
     }
 }
 
-class Book{
+class libraryObject{
+
+    private boolean checkedOut = false;
+
+    public void checkOut(){
+        checkedOut = true;
+    }
+
+    public void checkIn(){
+        checkedOut = false;
+    }
+
+    public boolean isCheckedOut(){
+        return checkedOut;
+    }
+
+}
+
+class Book extends libraryObject{
 
     private String title;
     private String author;
     private int yearPublished;
-    private boolean checkedOut = false;
 
     public Book(String t, String a, int i) {
         title = t;
@@ -192,26 +229,27 @@ class Book{
         return title;
     }
 
-    public void checkOutBook(){
-        checkedOut = true;
-    }
-
-    public void checkInBook(){
-        checkedOut = false;
-    }
-
-    public boolean isCheckedOut(){
-        return checkedOut;
-    }
-
     @Override
     public String toString() {
         return title + " || " + author + " || " + yearPublished;
     }
 }
 
-class Movie{
+class Movie extends libraryObject{
+
     private String name, director;
     private int year, rating;
+
+    public Movie(String n, int y, String d, int r){
+        name = n;
+        director = d;
+        year = y;
+        rating = r;
+    }
+
+    @Override
+    public String toString(){
+        return name + " || " + year + " || " + director + " || " + rating;
+    }
 
 }
