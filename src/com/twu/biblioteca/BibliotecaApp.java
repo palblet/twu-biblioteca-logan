@@ -209,3 +209,9 @@ class Book{
         return title + " || " + author + " || " + yearPublished;
     }
 }
+
+class Movie{
+    private String name, director;
+    private int year, rating;
+
+}
