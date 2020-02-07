@@ -8,7 +8,8 @@ public class BibliotecaApp {
     private static ArrayList<Book> bookList = new ArrayList<Book>();
     private static ArrayList<Movie> movieList = new ArrayList<Movie>();
     private static ArrayList<Customer> customers = new ArrayList<Customer>();
-    private static int numMenuItems = 6, numOfBooks = 3, numOfMovies = 3;
+    private static int numMenuItems = 7, numOfBooks = 3, numOfMovies = 3;
+    private static Customer user;
 
     public static void main(String[] args) {
         t("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n");
@@ -28,12 +29,13 @@ public class BibliotecaApp {
             displayMenu();
 
             switch(getInput(numMenuItems)){
-                case 6: done = true;break;
+                case 7: done = true;break;
                 case 1: displayBookList();break;
                 case 2: displayMovieList();break;
                 case 3: checkOutBook();break;
                 case 4: checkInBook();break;
                 case 5: checkOutMovie();break;
+                case 6: displayUserInfo();break;
             }
         }
     }
@@ -52,6 +54,10 @@ public class BibliotecaApp {
                 "4: Check in a Book\n"+
                 "5: Check out a Movie\n"+
                 "6: Exit\n");
+    }
+
+    public static void displayUserInfo(){
+        t(user.toString());
     }
 
     public static void populateBookList(){
