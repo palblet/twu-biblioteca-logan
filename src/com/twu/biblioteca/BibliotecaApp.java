@@ -40,6 +40,7 @@ public class BibliotecaApp {
         }
     }
 
+    //Starts log in
     public static boolean logIn(){
         t("libraryNumber: ");
         String libraryNumber = getInput();
@@ -47,6 +48,7 @@ public class BibliotecaApp {
         return attemptPassword(attempt);
     }
 
+    //checks if log in user is correct
     private static Customer validatelibraryNumber(String libraryNumber) {
         for (Customer c: customers) {
             if(c.getlibraryNumber().equals(libraryNumber)){
@@ -57,6 +59,7 @@ public class BibliotecaApp {
         return null;
     }
 
+    //attempt password for the user
     private static boolean attemptPassword(Customer attempt){
         if(attempt != null){
             t("Password: ");
@@ -262,90 +265,5 @@ public class BibliotecaApp {
     //Quality of Life
     public static void t(String s){
         System.out.println(s);
-    }
-}
-
-class libraryObject{
-
-    private boolean checkedOut = false;
-
-    public void checkOut(){
-        checkedOut = true;
-    }
-
-    public void checkIn(){
-        checkedOut = false;
-    }
-
-    public boolean isCheckedOut(){
-        return checkedOut;
-    }
-
-}
-
-class Book extends libraryObject{
-
-    private String title;
-    private String author;
-    private int yearPublished;
-
-    public Book(String t, String a, int i) {
-        title = t;
-        author = a;
-        yearPublished = i;
-    }
-
-    public String bookTitle(){
-        return title;
-    }
-
-    @Override
-    public String toString() {
-        return title + " || " + author + " || " + yearPublished;
-    }
-}
-
-class Movie extends libraryObject{
-
-    private String name, director;
-    private int year, rating;
-
-    public Movie(String n, int y, String d, int r){
-        name = n;
-        director = d;
-        year = y;
-        rating = r;
-    }
-
-    @Override
-    public String toString(){
-        return name + " || " + year + " || " + director + " || " + rating;
-    }
-
-}
-
-class Customer{
-    private String libraryNumber, password;
-    private String name, email, phoneNumber;
-
-    public Customer(String l, String p, String n, String e, String pn){
-        libraryNumber = l;
-        password = p;
-        name = n;
-        email = e;
-        phoneNumber = pn;
-    }
-
-    public String getlibraryNumber(){
-        return libraryNumber;
-    }
-
-    public String getPassword(){
-        return password;
-    }
-
-    @Override
-    public String toString(){
-        return name + " || " + email + " || " + phoneNumber;
     }
 }
