@@ -7,7 +7,7 @@ public class BibliotecaApp {
 
     private static ArrayList<Book> bookList = new ArrayList<Book>();
     private static ArrayList<Movie> movieList = new ArrayList<Movie>();
-    private static int numMenuItems = 5, numOfBooks = 3, numOfMovies = 3;
+    private static int numMenuItems = 7, numOfBooks = 3, numOfMovies = 3;
 
     public static void main(String[] args) {
         System.out.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
@@ -23,14 +23,27 @@ public class BibliotecaApp {
             space();
 
             switch(getInput(numMenuItems)){
-                case 5: done = true;break;
+                case 7: done = true;break;
                 case 1: displayBookList();break;
                 case 2: displayMovieList();break;
                 case 3: checkOutBook();break;
                 case 4: checkInBook();break;
+                case 5: checkOutMovie();break;
+                //case 6: checkInMovie();break;
             }
             space();
         }
+    }
+
+    public static void displayMenu(){
+        System.out.println("Menu:\n"+
+                "1: List of Books\n"+
+                "2: List of Movies\n"+
+                "3: Check out a Book\n"+
+                "4: Check in a Book\n"+
+                "5: Check out a Movie\n"+
+                "6: Check in a Movie\n"+
+                "7: Exit");
     }
 
     public static void populateBookList(){
@@ -43,15 +56,6 @@ public class BibliotecaApp {
         movieList.add(new Movie("First Movie", 1987, "Some Guy", 6));
         movieList.add(new Movie("Second Movie", 1999, "His Brother", 8));
         movieList.add(new Movie("Third Movie", 2007, "Geff", 3));
-    }
-
-    public static void displayMenu(){
-        System.out.println("Menu:\n"+
-                "1: List of Books\n"+
-                "2: List of Movies\n"+
-                "3: Check out a Book\n"+
-                "4: Check in a Book\n"+
-                "5: Exit");
     }
 
     //Displays books in the list
@@ -70,7 +74,7 @@ public class BibliotecaApp {
         int num = numOfMovies;
         for (Movie i:movieList) {
             if(!i.isCheckedOut()) {
-                System.out.println(numOfMovies - --num + ": " + i.toString());
+                System.out.println(numOfMovies - --num + " : " + i.toString());
             }
         }
         space();
@@ -134,6 +138,10 @@ public class BibliotecaApp {
     public static void checkOutBook(){
         System.out.println("There are " + numOfBooks + " available.\n");
         int i = getInput(numOfBooks);
+        validateCheckOutBook(i);
+    }
+
+    public static void validateCheckOutBook(int i){
         if(bookList.get(i-1).isCheckedOut())
         {
             System.out.println("Sorry, that book is not available");
@@ -144,6 +152,24 @@ public class BibliotecaApp {
         }
     }
 
+    //Checks out a movie
+    public static void checkOutMovie(){
+        System.out.println("There are " + numOfMovies + "available.\n");
+        int i = getInput(numOfMovies);
+        validateCheckOutMovie(i);
+    }
+
+    private static void validateCheckOutMovie(int i) {
+        if(movieList.get(i-1).isCheckedOut())
+        {
+            System.out.println("Sorry, that book is not available");
+        }else{
+            System.out.println("Thank you! Enjoy the book");
+            movieList.get(i-1).checkOut();
+            removeCheckedOutMovie(i-1);
+        }
+    }
+
     //Checks in a book
     private static void checkInBook() {
         System.out.println("Please give a Book title");
@@ -151,7 +177,7 @@ public class BibliotecaApp {
         int bookLocation;
         book = getInput();
         bookLocation = findBook(book);
-        validateCheckIn(bookLocation);
+        validateCheckInBook(bookLocation);
     }
 
     //Finds the book location by title
@@ -166,7 +192,7 @@ public class BibliotecaApp {
     }
 
     //If the checked out book location is real, check it in
-    public static void validateCheckIn(int bookLocation){
+    public static void validateCheckInBook(int bookLocation){
         if(bookLocation == -1){
             System.out.println("That is not a valid book to return.");
         }else{
@@ -180,6 +206,13 @@ public class BibliotecaApp {
         Book temp = bookList.get(i);
         bookList.remove(i);
         bookList.add(temp);
+    }
+
+    //Removes a checked out movie from the displayed list of movies
+    public static void removeCheckedOutMovie(int i){
+        Movie temp = movieList.get(i);
+        movieList.remove(i);
+        movieList.add(temp);
     }
 
     //Supplement method for validating input
