@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ab29a354-a860-4095-8439-7f45183810c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581012448918</updated>
       <workItem from="1581012450348" duration="4877000" />
-      <workItem from="1581044736494" duration="3090000" />
+      <workItem from="1581044736494" duration="5599000" />
     </task>
     <task id="LOCAL-00001" summary="Test Commit">
       <created>1581024461711</created>
@@ -103,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581030358862</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Author and Year Published to output">
+      <created>1581049301099</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581049301100</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +122,8 @@
     <MESSAGE value="More Git Testing" />
     <MESSAGE value="Added desired greeting message" />
     <MESSAGE value="Displayed set of Books" />
-    <option name="LAST_COMMIT_MESSAGE" value="Displayed set of Books" />
+    <MESSAGE value="Added Author and Year Published to output" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Author and Year Published to output" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581024499973">
@@ -125,26 +134,26 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="744" y="456" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1581012510968" />
-    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581030358648">
+    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581051819898">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581030358648" />
-    <state width="852" height="318" key="GridCell.Tab.0.bottom" timestamp="1581049263790">
+    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581051819898" />
+    <state width="852" height="318" key="GridCell.Tab.0.bottom" timestamp="1581051831962">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581049263790" />
-    <state width="852" height="318" key="GridCell.Tab.0.center" timestamp="1581049263789">
+    <state width="852" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581051831962" />
+    <state width="852" height="318" key="GridCell.Tab.0.center" timestamp="1581051831961">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581049263789" />
-    <state width="852" height="318" key="GridCell.Tab.0.left" timestamp="1581049263789">
+    <state width="852" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581051831961" />
+    <state width="852" height="318" key="GridCell.Tab.0.left" timestamp="1581051831960">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581049263789" />
-    <state width="852" height="318" key="GridCell.Tab.0.right" timestamp="1581049263790">
+    <state width="852" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581051831960" />
+    <state width="852" height="318" key="GridCell.Tab.0.right" timestamp="1581051831962">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581049263790" />
+    <state width="852" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581051831962" />
     <state x="384" y="141" key="SettingsEditor" timestamp="1581024509775">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -157,9 +166,9 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="676" y="484" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1581028360298" />
-    <state x="112" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1581029719548">
+    <state x="112" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1581049592622">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="112" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1581029719548" />
+    <state x="112" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1581049592622" />
   </component>
 </project>
