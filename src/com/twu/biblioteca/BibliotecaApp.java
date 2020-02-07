@@ -7,26 +7,25 @@ public class BibliotecaApp {
 
     private static ArrayList<Book> bookList = new ArrayList<Book>();
     private static ArrayList<Movie> movieList = new ArrayList<Movie>();
+    private static ArrayList<Customer> customers = new ArrayList<Customer>();
     private static int numMenuItems = 6, numOfBooks = 3, numOfMovies = 3;
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
-        space();
+        t("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n");
 
         populateBookList();
         populateMovieList();
-
+        populateCustomers();
 
         boolean loggedIn = false, done = false;
 
         while(!loggedIn){
-
+            loggedIn = logIn();
         }
 
         while(!done){
 
             displayMenu();
-            space();
 
             switch(getInput(numMenuItems)){
                 case 6: done = true;break;
@@ -36,18 +35,23 @@ public class BibliotecaApp {
                 case 4: checkInBook();break;
                 case 5: checkOutMovie();break;
             }
-            space();
         }
     }
 
+    public static boolean logIn(){
+        boolean loggedIn = false;
+        t("Username: ");
+        return loggedIn;
+    }
+
     public static void displayMenu(){
-        System.out.println("Menu:\n"+
+        t("Menu:\n"+
                 "1: List of Books\n"+
                 "2: List of Movies\n"+
                 "3: Check out a Book\n"+
                 "4: Check in a Book\n"+
                 "5: Check out a Movie\n"+
-                "6: Exit");
+                "6: Exit\n");
     }
 
     public static void populateBookList(){
@@ -62,15 +66,20 @@ public class BibliotecaApp {
         movieList.add(new Movie("Third Movie", 2007, "Geff", 3));
     }
 
+    private static void populateCustomers() {
+        customers.add(new Customer("123-456","password", "Sam Pepper", "sp@yahoo.com", "1234567890"));
+        customers.add(new Customer("890-098","password", "Lonely Heart", "lh@yahoo.com", "2140009999"));
+        customers.add(new Customer("654-321","password", "Cub Band", "cb@yahoo.com", "8005551234"));
+    }
+
     //Displays books in the list
     public static void displayBookList(){
         int num = numOfBooks;
         for (Book i:bookList) {
             if(!i.isCheckedOut()) {
-                System.out.println(numOfBooks - --num + ": " + i.toString());
+                t(numOfBooks - --num + ": " + i.toString() + "\n");
             }
         }
-        space();
     }
 
     //Displays movies in the list
@@ -78,10 +87,9 @@ public class BibliotecaApp {
         int num = numOfMovies;
         for (Movie i:movieList) {
             if(!i.isCheckedOut()) {
-                System.out.println(numOfMovies - --num + " : " + i.toString());
+                t(numOfMovies - --num + " : " + i.toString() + "\n");
             }
         }
-        space();
     }
 
     //Get input for a numbered list of choices
@@ -89,7 +97,7 @@ public class BibliotecaApp {
         Scanner scan = new Scanner(System.in);
         String input;
         do{
-            System.out.print("Please enter selection: ");
+            t("Please enter selection: ");
             input = scan.nextLine();
         }while(!checkInputRange(input, num));
         return Integer.parseInt(input);
@@ -100,7 +108,7 @@ public class BibliotecaApp {
         Scanner scan = new Scanner(System.in);
         String input;
         do{
-            System.out.print("Please enter selection: ");
+            t("Please enter selection: ");
             input = scan.nextLine();
         }while(!checkInput(input));
         return input;
@@ -140,7 +148,7 @@ public class BibliotecaApp {
 
     //Checks out a book
     public static void checkOutBook(){
-        System.out.println("There are " + numOfBooks + " available.\n");
+        t("There are " + numOfBooks + " available.\n");
         int i = getInput(numOfBooks);
         validateCheckOutBook(i);
     }
@@ -148,9 +156,9 @@ public class BibliotecaApp {
     public static void validateCheckOutBook(int i){
         if(bookList.get(i-1).isCheckedOut())
         {
-            System.out.println("Sorry, that book is not available");
+            t("Sorry, that book is not available");
         }else{
-            System.out.println("Thank you! Enjoy the book");
+            t("Thank you! Enjoy the book");
             bookList.get(i-1).checkOut();
             removeCheckedOutBook(i-1);
         }
@@ -158,7 +166,7 @@ public class BibliotecaApp {
 
     //Checks out a movie
     public static void checkOutMovie(){
-        System.out.println("There are " + numOfMovies + "available.\n");
+        t("There are " + numOfMovies + "available.\n");
         int i = getInput(numOfMovies);
         validateCheckOutMovie(i);
     }
@@ -166,9 +174,9 @@ public class BibliotecaApp {
     private static void validateCheckOutMovie(int i) {
         if(movieList.get(i-1).isCheckedOut())
         {
-            System.out.println("Sorry, that book is not available");
+            t("Sorry, that movie is not available");
         }else{
-            System.out.println("Thank you! Enjoy the book");
+            t("Thank you! Enjoy the Movie");
             movieList.get(i-1).checkOut();
             removeCheckedOutMovie(i-1);
         }
@@ -176,7 +184,7 @@ public class BibliotecaApp {
 
     //Checks in a book
     private static void checkInBook() {
-        System.out.println("Please give a Book title");
+        t("Please give a Book title");
         String book;
         int bookLocation;
         book = getInput();
@@ -198,9 +206,9 @@ public class BibliotecaApp {
     //If the checked out book location is real, check it in
     public static void validateCheckInBook(int bookLocation){
         if(bookLocation == -1){
-            System.out.println("That is not a valid book to return.");
+            t("That is not a valid book to return.");
         }else{
-            System.out.println("Thank you for returning the book");
+            t("Thank you for returning the book");
             bookList.get(bookLocation).checkIn();
         }
     }
@@ -221,14 +229,14 @@ public class BibliotecaApp {
 
     //Supplement method for validating input
     public static boolean notValid(boolean valid){
-        System.out.println("input is not valid");
+        t("input is not valid");
         valid = !valid;
         return valid;
     }
 
     //Quality of Life
-    public static void space(){
-        System.out.println();
+    public static void t(String s){
+        System.out.println(s);
     }
 }
 
@@ -293,10 +301,9 @@ class Movie extends libraryObject{
 
 class Customer{
     private String libraryNumber, password;
-    private String name, email;
-    private int phoneNumber;
+    private String name, email, phoneNumber;
 
-    public Customer(String l, String p, String n, String e, int pn){
+    public Customer(String l, String p, String n, String e, String pn){
         libraryNumber = l;
         password = p;
         name = n;
