@@ -7,7 +7,7 @@ public class BibliotecaApp {
 
     private static ArrayList<Book> bookList = new ArrayList<Book>();
     private static ArrayList<Movie> movieList = new ArrayList<Movie>();
-    private static int numMenuItems = 7, numOfBooks = 3, numOfMovies = 3;
+    private static int numMenuItems = 6, numOfBooks = 3, numOfMovies = 3;
 
     public static void main(String[] args) {
         System.out.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
@@ -23,13 +23,12 @@ public class BibliotecaApp {
             space();
 
             switch(getInput(numMenuItems)){
-                case 7: done = true;break;
+                case 6: done = true;break;
                 case 1: displayBookList();break;
                 case 2: displayMovieList();break;
                 case 3: checkOutBook();break;
                 case 4: checkInBook();break;
                 case 5: checkOutMovie();break;
-                //case 6: checkInMovie();break;
             }
             space();
         }
@@ -42,7 +41,6 @@ public class BibliotecaApp {
                 "3: Check out a Book\n"+
                 "4: Check in a Book\n"+
                 "5: Check out a Movie\n"+
-                "6: Check in a Movie\n"+
                 "7: Exit");
     }
 
