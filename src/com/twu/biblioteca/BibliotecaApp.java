@@ -1,28 +1,44 @@
 package com.twu.biblioteca;
 
-import com.sun.codemodel.internal.JArray;
-
 import java.util.ArrayList;
 
 public class BibliotecaApp {
-    static ArrayList<String> list = new ArrayList<String>();
+
+    private static ArrayList<Book> list = new ArrayList<Book>();
 
     public static void main(String[] args) {
         System.out.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
         populateBookList();
         displayBookList();
-
     }
 
     public static void populateBookList(){
-        list.add("Book One");
-        list.add("Book Two");
-        list.add("Book Three");
+        list.add(new Book("First Book", "Billy", 1990));
+        list.add(new Book("Second Book", "Bob", 1998));
+        list.add(new Book("Third Book", "Joe", 1986));
     }
 
     public static void displayBookList(){
-        for (String i:list) {
-            System.out.println(i);
+        for (Book i:list) {
+            System.out.println(i.toString());
         }
+    }
+}
+
+class Book{
+
+    private String title;
+    private String author;
+    private int yearPulished;
+
+    public Book(String t, String a, int i) {
+        title = t;
+        author = a;
+        yearPulished = i;
+    }
+
+    @Override
+    public String toString() {
+        return title + " || " + author + " || " + yearPulished;
     }
 }
