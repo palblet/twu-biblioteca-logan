@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class BibliotecaApp {
 
-    private static ArrayList<Book> list = new ArrayList<Book>();
+    private static ArrayList<Book> bookList = new ArrayList<Book>();
     private static int numMenuItems = 4;
     private static int numOfBooks = 3;
 
@@ -32,9 +32,9 @@ public class BibliotecaApp {
     }
 
     public static void populateBookList(){
-        list.add(new Book("First Book", "Billy Bob", 1990));
-        list.add(new Book("Second Book", "Bob Billy", 1998));
-        list.add(new Book("Third Book", "Joe Bob", 2001));
+        bookList.add(new Book("First Book", "Billy Bob", 1990));
+        bookList.add(new Book("Second Book", "Bob Billy", 1998));
+        bookList.add(new Book("Third Book", "Joe Bob", 2001));
     }
 
     public static void displayMenu(){
@@ -83,7 +83,7 @@ public class BibliotecaApp {
     public static boolean checkIntInput(String input){
         boolean valid = true;
         try {
-            int i = Integer.parseInt(input);
+            Integer.parseInt(input);
         } catch (NumberFormatException e) {
             notValid(valid);
         }
@@ -102,7 +102,7 @@ public class BibliotecaApp {
     //Displays books in the list
     public static void displayBookList(){
         int num = numOfBooks;
-        for (Book i:list) {
+        for (Book i:bookList) {
             if(!i.isCheckedOut()) {
                 System.out.println(numOfBooks - --num + ": " + i.toString());
             }
@@ -114,13 +114,13 @@ public class BibliotecaApp {
     public static void checkOutBook(){
         System.out.println("There are " + numOfBooks + " available.\n");
         int i = getInput(numOfBooks);
-        if(list.get(i-1).isCheckedOut())
+        if(bookList.get(i-1).isCheckedOut())
         {
             System.out.println("Sorry, that book is not available");
         }else{
             System.out.println("Thank you! Enjoy the book");
-            list.get(i-1).checkOutBook();
-            fixList(i-1);
+            bookList.get(i-1).checkOutBook();
+            removeCheckedOutBook(i-1);
         }
     }
 
@@ -137,9 +137,9 @@ public class BibliotecaApp {
     //Finds the book location by title
     private static int findBook(String book){
         int found = -1;
-        for (Book i: list) {
+        for (Book i: bookList) {
             if(i.isCheckedOut() && i.bookTitle().equals(book)){
-                found = list.indexOf(i);
+                found = bookList.indexOf(i);
             }
         }
         return found;
@@ -151,15 +151,15 @@ public class BibliotecaApp {
             System.out.println("That is not a valid book to return.");
         }else{
             System.out.println("Thank you for returning the book");
-            list.get(bookLocation).checkInBook();
+            bookList.get(bookLocation).checkInBook();
         }
     }
 
-    //Supplement method for removing a checked out book from the list
-    public static void fixList(int i){
-        Book temp = list.get(i);
-        list.remove(i);
-        list.add(temp);
+    //Removes a checked out book from the list
+    public static void removeCheckedOutBook(int i){
+        Book temp = bookList.get(i);
+        bookList.remove(i);
+        bookList.add(temp);
     }
 
     //Supplement method for validating input

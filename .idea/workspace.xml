@@ -16,12 +16,16 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1XRcfGCNDTgfE6Zel9SRUZUjc7Q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -35,7 +39,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -69,7 +75,7 @@
       <updated>1581012448918</updated>
       <workItem from="1581012450348" duration="4877000" />
       <workItem from="1581044736494" duration="9077000" />
-      <workItem from="1581087726168" duration="4265000" />
+      <workItem from="1581087726168" duration="5774000" />
     </task>
     <task id="LOCAL-00001" summary="Test Commit">
       <created>1581024461711</created>
@@ -141,13 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581091106652</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added Comments">
+      <created>1581092034203</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1581092034203</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Test Commit" />
     <MESSAGE value="More Git Testing" />
     <MESSAGE value="Added desired greeting message" />
@@ -156,7 +170,8 @@
     <MESSAGE value="Started Menu" />
     <MESSAGE value="Added Checking out a Book" />
     <MESSAGE value="Added Checking in a Book" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Checking in a Book" />
+    <MESSAGE value="Added Comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Comments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581024499973">
@@ -167,30 +182,34 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="744" y="456" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1581012510968" />
-    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581091106404">
+    <state x="639" y="414" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1581093239064">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581091106404" />
-    <state width="852" height="318" key="GridCell.Tab.0.bottom" timestamp="1581091531843">
+    <state x="639" y="414" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1581093239064" />
+    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581092034002">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581091531843" />
-    <state width="852" height="318" key="GridCell.Tab.0.center" timestamp="1581091531842">
+    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581092034002" />
+    <state width="852" height="318" key="GridCell.Tab.0.bottom" timestamp="1581092035450">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581091531842" />
-    <state width="852" height="318" key="GridCell.Tab.0.left" timestamp="1581091531842">
+    <state width="852" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581092035450" />
+    <state width="852" height="318" key="GridCell.Tab.0.center" timestamp="1581092035449">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581091531842" />
-    <state width="852" height="318" key="GridCell.Tab.0.right" timestamp="1581091531843">
+    <state width="852" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581092035449" />
+    <state width="852" height="318" key="GridCell.Tab.0.left" timestamp="1581092035448">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581091531843" />
-    <state x="384" y="141" key="SettingsEditor" timestamp="1581024509775">
+    <state width="852" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581092035448" />
+    <state width="852" height="318" key="GridCell.Tab.0.right" timestamp="1581092035449">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="384" y="141" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1581024509775" />
+    <state width="852" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581092035449" />
+    <state x="384" y="141" key="SettingsEditor" timestamp="1581093821426">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="384" y="141" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1581093821426" />
     <state x="566" y="392" key="com.intellij.ide.util.TipDialog" timestamp="1581087726931">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
