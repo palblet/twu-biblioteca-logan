@@ -61,12 +61,11 @@ public class BibliotecaApp {
 
     public static boolean checkInput(String input){
         boolean valid = true;
-        int i = 0;
-        if(input.isEmpty()){
+        if(input.isEmpty()) {
             notValid();
-        }else {
+        } else {
             try {
-                i = Integer.parseInt(input);
+                int i = Integer.parseInt(input);
             } catch (NumberFormatException e) {
                 notValid();
                 valid = false;

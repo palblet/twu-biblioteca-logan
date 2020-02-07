@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ab29a354-a860-4095-8439-7f45183810c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581012448918</updated>
       <workItem from="1581012450348" duration="4877000" />
-      <workItem from="1581044736494" duration="8788000" />
+      <workItem from="1581044736494" duration="8969000" />
     </task>
     <task id="LOCAL-00001" summary="Test Commit">
       <created>1581024461711</created>
@@ -118,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581051849719</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added Checking out a Book">
+      <created>1581055034089</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581055034089</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +137,8 @@
     <MESSAGE value="Displayed set of Books" />
     <MESSAGE value="Added Author and Year Published to output" />
     <MESSAGE value="Started Menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started Menu" />
+    <MESSAGE value="Added Checking out a Book" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Checking out a Book" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581024499973">
@@ -142,10 +149,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="744" y="456" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1581012510968" />
-    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581051849497">
+    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581055033877">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581051849497" />
+    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581055033877" />
     <state width="852" height="318" key="GridCell.Tab.0.bottom" timestamp="1581054999454">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
