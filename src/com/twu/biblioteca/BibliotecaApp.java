@@ -155,7 +155,7 @@ public class BibliotecaApp {
         }
     }
 
-    //Removes a checked out book from the list
+    //Removes a checked out book from the displayed list of books
     public static void removeCheckedOutBook(int i){
         Book temp = bookList.get(i);
         bookList.remove(i);
