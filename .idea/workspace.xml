@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab29a354-a860-4095-8439-7f45183810c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/The Biblioteca Database Exercise.rtf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/biblioteca.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/BibliotecaAppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/libraryObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/libraryObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1XRcfGCNDTgfE6Zel9SRUZUjc7Q" />
   <component name="ProjectLevelVcsManager">
@@ -172,7 +162,7 @@
       <workItem from="1581012450348" duration="4877000" />
       <workItem from="1581044736494" duration="9077000" />
       <workItem from="1581087726168" duration="21734000" />
-      <workItem from="1581227011450" duration="1827000" />
+      <workItem from="1581227011450" duration="2155000" />
     </task>
     <task id="LOCAL-00001" summary="Test Commit">
       <created>1581024461711</created>
@@ -356,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581108812486</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Fixed bug with checking out">
+      <created>1581228915173</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1581228915173</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +384,8 @@
     <MESSAGE value="librarian seeing users with checked out books" />
     <MESSAGE value="Fixed displaying user's checked out book" />
     <MESSAGE value="small edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="small edits" />
+    <MESSAGE value="Fixed bug with checking out" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with checking out" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581024499973">
@@ -414,26 +412,26 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="639" y="414" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1581093239064" />
-    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581108812300">
+    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581228914707">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581108812300" />
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1581228846707">
+    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581228914707" />
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1581229014647">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581228846707" />
-    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1581228846706">
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581229014647" />
+    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1581229014646">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581228846706" />
-    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1581228846705">
+    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581229014646" />
+    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1581229014646">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581228846705" />
-    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1581228846706">
+    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581229014646" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1581229014647">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581228846706" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581229014647" />
     <state width="852" height="391" key="GridCell.Tab.1.bottom" timestamp="1581126755467">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -462,10 +460,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="566" y="392" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1581227015299" />
-    <state x="676" y="484" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581028360298">
+    <state x="676" y="484" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581229010841">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="676" y="484" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1581028360298" />
+    <state x="676" y="484" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1581229010841" />
     <state x="21" y="147" width="852" height="825" key="find.popup" timestamp="1581105321057">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
