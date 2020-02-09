@@ -20,7 +20,7 @@ public class BibliotecaAppTest {
         users.get(1).makeLibrarian();
         users.get(0).checkOutBook(bookList.get(0));
         //System.out.println(users.get(0).checkedOutBooksString());
-        displayCheckedOut();
+        //displayCheckedOut();
         assertEquals(1, 1);
     }
 }

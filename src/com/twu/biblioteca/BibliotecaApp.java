@@ -102,7 +102,7 @@ public class BibliotecaApp {
         bookList.add(new Book("First Book", "Billy Bob", 1990));
         bookList.add(new Book("Second Book", "Bob Billy", 1998));
         bookList.add(new Book("Third Book", "Joe Bob", 2001));
-        bookList.get(1).checkOut();
+        validateCheckOutBook(2);
     }
 
     private static void populateMovieList() {
@@ -173,7 +173,7 @@ public class BibliotecaApp {
         if(valid){
             int i = Integer.parseInt(input);
             if (i > range || i <= 0) {
-                notValid(valid);
+                valid = notValid();
             }
         }
         return valid;
@@ -185,7 +185,7 @@ public class BibliotecaApp {
         try {
             Integer.parseInt(input);
         } catch (NumberFormatException e) {
-            notValid(valid);
+            valid = notValid();
         }
         return valid;
     }
@@ -194,7 +194,7 @@ public class BibliotecaApp {
     public static boolean checkInput(String input){
         boolean valid = true;
             if(input.isEmpty()){
-                notValid(valid);
+                valid = notValid();
             }
         return valid;
     }
@@ -213,7 +213,8 @@ public class BibliotecaApp {
         }else{
             t("Thank you! Enjoy the book");
             bookList.get(i-1).checkOut();
-            removeCheckedOutBook(i-1);
+            removeCheckedOut(i-1, bookList);
+            numOfBooks--;
         }
     }
 
@@ -231,7 +232,8 @@ public class BibliotecaApp {
         }else{
             t("Thank you! Enjoy the Movie");
             movieList.get(i-1).checkOut();
-            removeCheckedOutMovie(i-1);
+            removeCheckedOut(i-1, movieList);
+            numOfMovies--;
         }
     }
 
@@ -239,8 +241,8 @@ public class BibliotecaApp {
     private static void checkInBook() {
         t("Please give a Book title");
         String book;
-        int bookLocation;
         book = getInput();
+        int bookLocation;
         bookLocation = findBook(book);
         validateCheckInBook(bookLocation);
     }
@@ -263,27 +265,21 @@ public class BibliotecaApp {
         }else{
             t("Thank you for returning the book");
             bookList.get(bookLocation).checkIn();
+            numOfBooks++;
         }
     }
 
-    //Removes a checked out book from the displayed list of books
-    public static void removeCheckedOutBook(int i){
-        Book temp = bookList.get(i);
-        bookList.remove(i);
-        bookList.add(temp);
-    }
-
-    //Removes a checked out movie from the displayed list of movies
-    public static void removeCheckedOutMovie(int i){
-        Movie temp = movieList.get(i);
-        movieList.remove(i);
-        movieList.add(temp);
+    //Removes a checked out book or movie from the displayed list of books
+    public static void removeCheckedOut(int i, ArrayList list){
+        Object temp = list.get(i);
+        list.remove(i);
+        list.add(temp);
     }
 
     //Supplement method for validating input
-    public static boolean notValid(boolean valid){
+    public static boolean notValid(){
         t("input is not valid");
-        return !valid;
+        return false;
     }
 
     //Quality of Life
