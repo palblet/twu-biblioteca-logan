@@ -9,18 +9,16 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class UserTest {
+    Book testBook = new Book("title", "author", 1900);
+    User testUser = new User("123","password","name","email@email.com","123");
+
 
     @Test
     public void hasCheckedOutBooks() {
-        Book testBook = new Book("title", "author", 1900);
         testBook.checkOut();
-        User testUser = new User("123","password","name","email@email.com","123");
         testUser.checkOutBook(testBook);
         assertEquals(1, testUser.getCheckOutBooks().size());
     }
-
-
-    User testUser = new User("123","password","name","email@email.com","123");
 
     @Test
     public void userIsLibrarian(){
@@ -30,9 +28,15 @@ public class UserTest {
 
     @Test
     public void userHasBook(){
-        Book book =new Book("First Book", "Billy Bob", 1990);
-        testUser.checkOutBook(book);
-        assertTrue(testUser.hasBook(book.bookTitle()));
+        testUser.checkOutBook(testBook);
+        assertTrue(testUser.hasBook(testBook.bookTitle()));
+    }
+
+    @Test
+    public void bookWasRemoved(){
+        testUser.checkOutBook(testBook);
+        testUser.checkInBook(testBook);
+        assertTrue(!testUser.hasBook("title"));
     }
 
 }

@@ -59,6 +59,7 @@ class User {
         String output = "";
         for (Book book:checkedOut) {
             output += book.toString();
+            output += "\n";
         }
         return output;
     }
