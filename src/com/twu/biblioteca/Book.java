@@ -6,10 +6,10 @@ class Book extends libraryObject{
     private String author;
     private int yearPublished;
 
-    public Book(String t, String a, int i) {
-        title = t;
-        author = a;
-        yearPublished = i;
+    public Book(String title, String author, int yearPublished) {
+        this.title = title;
+        this.author = author;
+        this.yearPublished = yearPublished;
     }
 
     public String bookTitle(){

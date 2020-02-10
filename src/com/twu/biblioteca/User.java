@@ -6,7 +6,7 @@ class User {
     private String libraryNumber, password;
     private String name, email, phoneNumber;
     private ArrayList<Book> checkedOut = new ArrayList<Book>();
-    boolean librarian = false;
+    private boolean librarian = false;
 
     public User(String libraryNumber, String password, String name, String email, String phoneNumber){
         this.libraryNumber = libraryNumber;
@@ -16,7 +16,7 @@ class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getlibraryNumber(){
+    public String getLibraryNumber(){
         return libraryNumber;
     }
 
@@ -31,6 +31,9 @@ class User {
     public void checkOutBook(Book book){
         checkedOut.add(book);
     }
+
+    public void checkInBook(Book book) { checkedOut.remove(book); }
+
     public ArrayList<Book> getCheckOutBooks() {
         return checkedOut;
     }
@@ -41,6 +44,15 @@ class User {
 
     public void makeLibrarian(){
         librarian = true;
+    }
+
+    public boolean hasBook(Book book){
+        for (Book b: checkedOut) {
+            if(b.bookTitle().equals(book.bookTitle())){
+                return true;
+            }
+        }
+        return false;
     }
 
     public String checkedOutBooksString(){
