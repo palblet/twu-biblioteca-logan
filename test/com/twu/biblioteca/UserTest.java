@@ -32,7 +32,7 @@ public class UserTest {
     public void userHasBook(){
         Book book =new Book("First Book", "Billy Bob", 1990);
         testUser.checkOutBook(book);
-        assertTrue(testUser.hasBook(book));
+        assertTrue(testUser.hasBook(book.bookTitle()));
     }
 
 }

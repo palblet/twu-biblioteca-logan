@@ -266,8 +266,10 @@ public class BibliotecaApp {
 
     //If the checked out book location is real, check it in
     public static void validateCheckInBook(int bookLocation){
-        if(bookLocation == -1 && user.hasBook(bookList.get(bookLocation))){
+        if(bookLocation == -1) {
             t("That is not a valid book to return.");
+        }else if (!user.hasBook(bookList.get(bookLocation).bookTitle())){
+            t("Someone else has that book checked out.");
         }else{
             t("Thank you for returning the book");
             user.checkInBook(bookList.get(bookLocation));

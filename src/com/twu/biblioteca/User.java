@@ -46,9 +46,9 @@ class User {
         librarian = true;
     }
 
-    public boolean hasBook(Book book){
+    public boolean hasBook(String bookTitle){
         for (Book b: checkedOut) {
-            if(b.bookTitle().equals(book.bookTitle())){
+            if(b.bookTitle().equals(bookTitle)){
                 return true;
             }
         }

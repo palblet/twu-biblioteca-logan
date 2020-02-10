@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab29a354-a860-4095-8439-7f45183810c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/UserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/User.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/libraryObject.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +167,7 @@
       <workItem from="1581227011450" duration="2488000" />
       <workItem from="1581347501205" duration="5205000" />
       <workItem from="1581352733741" duration="109000" />
-      <workItem from="1581352854152" duration="282000" />
+      <workItem from="1581352854152" duration="919000" />
     </task>
     <task id="LOCAL-00001" summary="Test Commit">
       <created>1581024461711</created>
@@ -378,11 +365,29 @@
       <option name="project" value="LOCAL" />
       <updated>1581229187672</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="deteled out">
+      <created>1581353250912</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1581353250912</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -410,7 +415,8 @@
     <MESSAGE value="Fixed displaying user's checked out book" />
     <MESSAGE value="Fixed bug with checking out" />
     <MESSAGE value="small edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="small edits" />
+    <MESSAGE value="deteled out" />
+    <option name="LAST_COMMIT_MESSAGE" value="deteled out" />
   </component>
   <component name="WindowStateProjectService">
     <state x="496" y="225" key="#Notifications" timestamp="1581229320794">
@@ -441,26 +447,26 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="639" y="414" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1581093239064" />
-    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581353198656">
+    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581353250394">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581353198656" />
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1581353231124">
+    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581353250394" />
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1581353957697">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581353231124" />
-    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1581353231123">
+    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581353957697" />
+    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1581353957696">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581353231123" />
-    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1581353231122">
+    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581353957696" />
+    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1581353957695">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581353231122" />
-    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1581353231123">
+    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581353957695" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1581353957696">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581353231123" />
+    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581353957696" />
     <state width="852" height="391" key="GridCell.Tab.1.bottom" timestamp="1581126755467">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
