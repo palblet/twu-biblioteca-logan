@@ -24,7 +24,6 @@ public class BibliotecaApp {
 
         while(!loggedIn()){ }
 
-
         int numMenuItems = 7;
         while(!done){
 
@@ -62,7 +61,7 @@ public class BibliotecaApp {
     }
 
     //checks if log in user is correct
-    private static User validateLibraryNumber(String libraryNumber) {
+    public static User validateLibraryNumber(String libraryNumber) {
         for (User c: users) {
             if(c.getLibraryNumber().equals(libraryNumber)){
                 user = c;
@@ -73,7 +72,7 @@ public class BibliotecaApp {
     }
 
     //attempt password for the user
-    private static boolean attemptPassword(User attempt){
+    public static boolean attemptPassword(User attempt){
         if(attempt != null){
             t("Password: ");
             String password = getInput();
@@ -106,7 +105,7 @@ public class BibliotecaApp {
         bookList.add(new Book("Third Book", "Joe Bob", 2001));
     }
 
-    private static void populateMovieList() {
+    public static void populateMovieList() {
         movieList.add(new Movie("First Movie", 1987,
                 "Some Guy", 6));
         movieList.add(new Movie("Second Movie", 1999,
@@ -115,7 +114,7 @@ public class BibliotecaApp {
                 "Geff", 3));
     }
 
-    private static void populateUsers() {
+    public static void populateUsers() {
         users.add(new User("123-4560","password",
                 "Sam Pepper", "sp@yahoo.com", "1234567890"));
         users.add(new User("890-0980","password",
@@ -233,7 +232,7 @@ public class BibliotecaApp {
 
     }
 
-    private static void validateCheckOutMovie(int i) {
+    public static void validateCheckOutMovie(int i) {
         if(i == -1)
             t("There is no movie there");
         else if(movieList.get(i).isCheckedOut())
@@ -247,7 +246,7 @@ public class BibliotecaApp {
     }
 
     //Checks in a book
-    private static void checkInBook() {
+    public static void checkInBook() {
         t("Please give a Book title");
         String bookTitle;
         bookTitle = getInput();
@@ -259,7 +258,7 @@ public class BibliotecaApp {
     }
 
     //Finds the book location by title
-    private static int findBook(String bookTitle, ArrayList<Book> books){
+    public static int findBook(String bookTitle, ArrayList<Book> books){
         int found = -1;
         for (Book book: books) {
             if(book.bookTitle().equals(bookTitle) && book.isCheckedOut()){
