@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static com.twu.biblioteca.BibliotecaApp.displayCheckedOut;
+import static com.twu.biblioteca.BibliotecaApp.validateCheckOutBook;
 import static org.junit.Assert.assertEquals;
 
 public class BibliotecaAppTest {
@@ -22,5 +22,12 @@ public class BibliotecaAppTest {
         //System.out.println(users.get(0).checkedOutBooksString());
         //displayCheckedOut();
         assertEquals(1, 1);
+    }
+
+    @Test public void outOfBounds(){
+        bookList.add(new Book("First Book", "Billy Bob", 1990));
+        bookList.add(new Book("Second Book", "Bob Billy", 1998));
+        bookList.add(new Book("Third Book", "Joe Bob", 2001));
+        //validateCheckOutBook(1);
     }
 }

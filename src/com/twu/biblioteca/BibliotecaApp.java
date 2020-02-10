@@ -20,26 +20,25 @@ public class BibliotecaApp {
 
         users.get(3).makeLibrarian();
 
-        boolean loggedIn = false, done = false;
+        boolean done = false;
 
-        while(!loggedIn){
-            loggedIn = logIn();
-        }
+        while(!loggedIn()){ }
 
-        int numMenuItems = 8;
+
+        int numMenuItems = 7;
         while(!done){
 
             displayMenu();
 
             switch(getInput(numMenuItems)){
-                case 7: done = true;break;
+                case 0: done = true;break;
                 case 1: displayBookList();break;
                 case 2: displayMovieList();break;
                 case 3: checkOutBook();break;
                 case 4: checkInBook();break;
                 case 5: checkOutMovie();break;
                 case 6: displayUserInfo();break;
-                case 8:
+                case 7:
                     if(user.isLibrarian())
                         displayCheckedOut();
                     break;
@@ -55,7 +54,7 @@ public class BibliotecaApp {
     }
 
     //Starts log in
-    public static boolean logIn(){
+    public static boolean loggedIn(){
         t("libraryNumber: ");
         String libraryNumber = getInput();
         User attempt = validateLibraryNumber(libraryNumber);
@@ -90,11 +89,11 @@ public class BibliotecaApp {
                 "3: Check out a Book\n"+
                 "4: Check in a Book\n"+
                 "5: Check out a Movie\n"+
-                "6: Display User Info\n"+
-                "7: Exit");
+                "6: Display User Info");
         if(user.isLibrarian()){
-            t("8: Who has books checked out");
+            t("7: Who has books checked out");
         }
+        t("0: Exit");
     }
 
     public static void displayUserInfo(){
@@ -172,7 +171,7 @@ public class BibliotecaApp {
         boolean valid = checkIntInput(input);
         if(valid){
             int i = Integer.parseInt(input);
-            if (i > range || i <= 0) {
+            if (i > range || i < 0) {
                 valid = notValid();
             }
         }
@@ -210,10 +209,11 @@ public class BibliotecaApp {
     }
 
     public static void validateCheckOutBook(int i){
-        if(bookList.get(i).isCheckedOut())
-        {
+        if(i == -1)
+            t("There is no book there");
+        else if(bookList.get(i).isCheckedOut())
             t("Sorry, that book is not available");
-        }else{
+        else{
             t("Thank you! Enjoy the book");
             bookList.get(i).checkOut();
             user.checkOutBook(bookList.get(i));
@@ -226,7 +226,7 @@ public class BibliotecaApp {
     public static void checkOutMovie(){
         if(availableMovies != 0){
             t("There are " + availableMovies + " available.\n");
-            int i = getInput(availableMovies);
+            int i = getInput(availableMovies) - 1;
             validateCheckOutMovie(i);
         }else
             t("There are no movies available.\n");
@@ -234,13 +234,14 @@ public class BibliotecaApp {
     }
 
     private static void validateCheckOutMovie(int i) {
-        if(movieList.get(i-1).isCheckedOut())
-        {
+        if(i == -1)
+            t("There is no movie there");
+        else if(movieList.get(i).isCheckedOut())
             t("Sorry, that movie is not available");
-        }else{
+        else{
             t("Thank you! Enjoy the Movie");
-            movieList.get(i-1).checkOut();
-            removeCheckedOutMovie(i-1);
+            movieList.get(i).checkOut();
+            removeCheckedOutMovie(i);
             availableMovies--;
         }
     }

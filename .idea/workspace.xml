@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ab29a354-a860-4095-8439-7f45183810c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +77,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BibliotecaAppTest.outOfBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
+      <option name="METHOD_NAME" value="outOfBounds" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BibliotecaAppTest.seeUsersWithBooksCheckedOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
@@ -125,29 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.userIsLibrarian" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.UserTest" />
-      <option name="METHOD_NAME" value="userIsLibrarian" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BibliotecaApp" />
+        <item itemvalue="JUnit.BibliotecaAppTest.outOfBounds" />
         <item itemvalue="JUnit.UserTest.bookWasRemoved" />
         <item itemvalue="JUnit.UserTest.userHasBook" />
         <item itemvalue="JUnit.BibliotecaAppTest.seeUsersWithBooksCheckedOut" />
-        <item itemvalue="JUnit.UserTest.userIsLibrarian" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +167,7 @@
       <workItem from="1581227011450" duration="2488000" />
       <workItem from="1581347501205" duration="5205000" />
       <workItem from="1581352733741" duration="109000" />
-      <workItem from="1581352854152" duration="5196000" />
+      <workItem from="1581352854152" duration="8153000" />
     </task>
     <task id="LOCAL-00001" summary="Test Commit">
       <created>1581024461711</created>
@@ -386,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581357875879</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="small changes">
+      <created>1581358108919</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1581358108919</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +412,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added desired greeting message" />
     <MESSAGE value="Displayed set of Books" />
     <MESSAGE value="Added Author and Year Published to output" />
     <MESSAGE value="Started Menu" />
@@ -430,7 +436,8 @@
     <MESSAGE value="deteled out" />
     <MESSAGE value="Fixed bug where users checked in books they did not check out" />
     <MESSAGE value="Fixed bug that duplicated books when checking out a book" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug that duplicated books when checking out a book" />
+    <MESSAGE value="small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="496" y="225" key="#Notifications" timestamp="1581229320794">
@@ -461,42 +468,42 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="639" y="414" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1581093239064" />
-    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581358083014">
+    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581364214450">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581358083014" />
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom" timestamp="1581357917506">
+    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581364214450" />
+    <state width="1750" height="299" key="GridCell.Tab.0.bottom" timestamp="1581364098017">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581357917506" />
-    <state width="1750" height="318" key="GridCell.Tab.0.center" timestamp="1581357917505">
+    <state width="1750" height="299" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581364098017" />
+    <state width="1750" height="299" key="GridCell.Tab.0.center" timestamp="1581364098017">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581357917505" />
-    <state width="1750" height="318" key="GridCell.Tab.0.left" timestamp="1581357917505">
+    <state width="1750" height="299" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581364098017" />
+    <state width="1750" height="299" key="GridCell.Tab.0.left" timestamp="1581364098016">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581357917505" />
-    <state width="1750" height="318" key="GridCell.Tab.0.right" timestamp="1581357917506">
+    <state width="1750" height="299" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581364098016" />
+    <state width="1750" height="299" key="GridCell.Tab.0.right" timestamp="1581364098017">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="318" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581357917506" />
-    <state width="852" height="391" key="GridCell.Tab.1.bottom" timestamp="1581126755467">
+    <state width="1750" height="299" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581364098017" />
+    <state width="1750" height="391" key="GridCell.Tab.1.bottom" timestamp="1581363937732">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="391" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581126755467" />
-    <state width="852" height="391" key="GridCell.Tab.1.center" timestamp="1581126755466">
+    <state width="1750" height="391" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581363937732" />
+    <state width="1750" height="391" key="GridCell.Tab.1.center" timestamp="1581363937732">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="391" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581126755466" />
-    <state width="852" height="391" key="GridCell.Tab.1.left" timestamp="1581126755466">
+    <state width="1750" height="391" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581363937732" />
+    <state width="1750" height="391" key="GridCell.Tab.1.left" timestamp="1581363937731">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="391" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581126755466" />
-    <state width="852" height="391" key="GridCell.Tab.1.right" timestamp="1581126755466">
+    <state width="1750" height="391" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581363937731" />
+    <state width="1750" height="391" key="GridCell.Tab.1.right" timestamp="1581363937732">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="852" height="391" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581126755466" />
+    <state width="1750" height="391" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581363937732" />
     <state x="179" y="101" key="MergeDialog" timestamp="1581229391971">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
