@@ -56,12 +56,12 @@ class User {
     }
 
     public String checkedOutBooksString(){
-        String output = "";
+        StringBuilder output = new StringBuilder();
         for (Book book:checkedOut) {
-            output += book.toString();
-            output += "\n";
+            output.append(book.toString());
+            output.append("\n");
         }
-        return output;
+        return output.toString();
     }
 
     @Override

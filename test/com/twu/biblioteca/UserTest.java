@@ -3,10 +3,7 @@ package com.twu.biblioteca;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class UserTest {
     Book testBook = new Book("title", "author", 1900);
@@ -36,7 +33,7 @@ public class UserTest {
     public void bookWasRemoved(){
         testUser.checkOutBook(testBook);
         testUser.checkInBook(testBook);
-        assertTrue(!testUser.hasBook("title"));
+        assertFalse(testUser.hasBook("title"));
     }
 
 }
