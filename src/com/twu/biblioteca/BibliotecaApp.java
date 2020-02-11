@@ -1,15 +1,16 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class BibliotecaApp {
 
-    private static ArrayList<Book> bookList = new ArrayList<Book>();
-    private static ArrayList<Movie> movieList = new ArrayList<Movie>();
-    private static ArrayList<User> users = new ArrayList<User>();
-    private static int availableBooks = 3, availableMovies = 3;
-    private static User user;
+    private static List<Book> bookList = new ArrayList<Book>();
+    private static List<Movie> movieList = new ArrayList<Movie>();
+    private static List<User> users = new ArrayList<User>();
+    private static int availableBooks, availableMovies;
+    private static User currentUser;
 
     public static void main(String[] args) {
         t("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n");
@@ -22,7 +23,7 @@ public class BibliotecaApp {
 
         boolean done = false;
 
-        while(!loggedIn()){ }
+        loggedIn();
 
         int numMenuItems = 7;
         while(!done){
@@ -38,7 +39,7 @@ public class BibliotecaApp {
                 case 5: checkOutMovie();break;
                 case 6: displayUserInfo();break;
                 case 7:
-                    if(user.isLibrarian())
+                    if(currentUser.isLibrarian())
                         displayCheckedOut();
                     break;
             }
@@ -57,14 +58,16 @@ public class BibliotecaApp {
         t("libraryNumber: ");
         String libraryNumber = getInput();
         User attempt = validateLibraryNumber(libraryNumber);
-        return attemptPassword(attempt);
+        if(!attemptPassword(attempt))
+            return loggedIn();
+        return true;
     }
 
     //checks if log in user is correct
     public static User validateLibraryNumber(String libraryNumber) {
         for (User c: users) {
             if(c.getLibraryNumber().equals(libraryNumber)){
-                user = c;
+                currentUser = c;
                 return c;
             }
         }
@@ -89,20 +92,21 @@ public class BibliotecaApp {
                 "4: Check in a Book\n"+
                 "5: Check out a Movie\n"+
                 "6: Display User Info");
-        if(user.isLibrarian()){
+        if(currentUser.isLibrarian()){
             t("7: Who has books checked out");
         }
         t("0: Exit");
     }
 
     public static void displayUserInfo(){
-        t(user.toString());
+        t(currentUser.toString());
     }
 
     public static void populateBookList(){
         bookList.add(new Book("First Book", "Billy Bob", 1990));
         bookList.add(new Book("Second Book", "Bob Billy", 1998));
         bookList.add(new Book("Third Book", "Joe Bob", 2001));
+        availableBooks = bookList.size();
     }
 
     public static void populateMovieList() {
@@ -112,6 +116,7 @@ public class BibliotecaApp {
                 "His Brother", 8));
         movieList.add(new Movie("Third Movie", 2007,
                 "Geff", 3));
+        availableMovies = movieList.size();
     }
 
     public static void populateUsers() {
@@ -215,7 +220,7 @@ public class BibliotecaApp {
         else{
             t("Thank you! Enjoy the book");
             bookList.get(i).checkOut();
-            user.checkOutBook(bookList.get(i));
+            currentUser.checkOutBook(bookList.get(i));
             removeCheckedOutBook(i);
             availableBooks--;
         }
@@ -253,12 +258,12 @@ public class BibliotecaApp {
         int bookLocation;
         bookLocation = findBook(bookTitle, bookList);
         int userBookLocation;
-        userBookLocation = findBook(bookTitle, user.getCheckOutBooks());
+        userBookLocation = findBook(bookTitle, currentUser.getCheckOutBooks());
         validateCheckInBook(bookLocation, userBookLocation);
     }
 
     //Finds the book location by title
-    public static int findBook(String bookTitle, ArrayList<Book> books){
+    public static int findBook(String bookTitle, List<Book> books){
         int found = -1;
         for (Book book: books) {
             if(book.bookTitle().equals(bookTitle) && book.isCheckedOut()){
@@ -276,7 +281,7 @@ public class BibliotecaApp {
             t("Someone else has that book checked out.");
         }else{
             t("Thank you for returning the book");
-            user.checkInBook(bookList.get(bookLocation));
+            currentUser.checkInBook(bookList.get(bookLocation));
             bookList.get(bookLocation).checkIn();
             availableBooks++;
         }
