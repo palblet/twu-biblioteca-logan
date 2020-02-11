@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-class libraryObject{
+abstract class library {
 
     private boolean checkedOut = false;
 
