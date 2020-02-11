@@ -168,6 +168,8 @@
       <workItem from="1581352854152" duration="9546000" />
       <workItem from="1581368969830" duration="171000" />
       <workItem from="1581440435160" duration="1149000" />
+      <workItem from="1581450637227" duration="206000" />
+      <workItem from="1581450983079" duration="381000" />
     </task>
     <task id="LOCAL-00001" summary="Test Commit">
       <created>1581024461711</created>
@@ -414,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581441174890</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="libraryObject is now abstract library">
+      <created>1581450775197</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1581450775197</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +444,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added Checking out a Book" />
     <MESSAGE value="Added Checking in a Book" />
     <MESSAGE value="Added Comments" />
     <MESSAGE value="Minor Edits" />
@@ -460,7 +468,8 @@
     <MESSAGE value="Changed menu for exit to be 0" />
     <MESSAGE value="Small changes" />
     <MESSAGE value="changed loggedIn() to be recursive" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed loggedIn() to be recursive" />
+    <MESSAGE value="libraryObject is now abstract library" />
+    <option name="LAST_COMMIT_MESSAGE" value="libraryObject is now abstract library" />
   </component>
   <component name="WindowStateProjectService">
     <state x="496" y="225" key="#Notifications" timestamp="1581229320794">
@@ -491,26 +500,26 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="639" y="414" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1581093239064" />
-    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581441174527">
+    <state x="474" y="162" key="CommitChangelistDialog2" timestamp="1581450774827">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581441174527" />
-    <state width="1750" height="299" key="GridCell.Tab.0.bottom" timestamp="1581441587503">
+    <state x="474" y="162" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1581450774827" />
+    <state width="1750" height="299" key="GridCell.Tab.0.bottom" timestamp="1581459720324">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="299" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581441587503" />
-    <state width="1750" height="299" key="GridCell.Tab.0.center" timestamp="1581441587502">
+    <state width="1750" height="299" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1581459720324" />
+    <state width="1750" height="299" key="GridCell.Tab.0.center" timestamp="1581459720323">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="299" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581441587502" />
-    <state width="1750" height="299" key="GridCell.Tab.0.left" timestamp="1581441587502">
+    <state width="1750" height="299" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1581459720322" />
+    <state width="1750" height="299" key="GridCell.Tab.0.left" timestamp="1581459720322">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="299" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581441587502" />
-    <state width="1750" height="299" key="GridCell.Tab.0.right" timestamp="1581441587503">
+    <state width="1750" height="299" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1581459720322" />
+    <state width="1750" height="299" key="GridCell.Tab.0.right" timestamp="1581459720323">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="299" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581441587503" />
+    <state width="1750" height="299" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1581459720323" />
     <state width="1750" height="391" key="GridCell.Tab.1.bottom" timestamp="1581365954757">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

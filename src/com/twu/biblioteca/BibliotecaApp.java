@@ -23,7 +23,7 @@ public class BibliotecaApp {
 
         boolean done = false;
 
-        loggedIn();
+        logIn();
 
         int numMenuItems = 7;
         while(!done){
@@ -54,13 +54,12 @@ public class BibliotecaApp {
     }
 
     //Starts log in
-    public static boolean loggedIn(){
+    public static void logIn(){
         t("libraryNumber: ");
         String libraryNumber = getInput();
         User attempt = validateLibraryNumber(libraryNumber);
         if(!attemptPassword(attempt))
-            return loggedIn();
-        return true;
+            logIn();
     }
 
     //checks if log in user is correct
